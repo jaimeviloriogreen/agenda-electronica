@@ -3,7 +3,7 @@
 <main class="main">
     <h1 class="main__title">Agenda Electrónica</h1>
     <section class="form-section">
-        <form action="/agendar" class="main__form" method="POST">
+        <form action="/agendar" class="main__form main__form-editar" method="POST">
             <input type="date" name="date" class="form__date">
             <textarea name="description" class="form__textarea"></textarea>
             <button class="form__button" type="submit" name="submit">Enviar</button>
@@ -30,10 +30,10 @@
                             <td><?= $event["hoy"]; ?></td>
                             <td>
                                 <a href="/eliminar?id=<?= $event["id"]; ?>">
-                                    <img src="assets/icons/delete.svg" alt="delet">
+                                    <img class="icon__delete" src="assets/icons/delete.svg" alt="delet">
                                 </a>
-                                <a href="editar/?id=<?= $event["id"]; ?>">
-                                    <img src="assets/icons/edit.svg" alt="edit">
+                                <a href="/editar?id=<?= $event["id"]; ?>">
+                                    <img class="icon__edit" src="assets/icons/edit.svg" alt="edit">
                                 </a>
                             </td>
                         </tr>
